@@ -1,0 +1,43 @@
+name: ZoneAmbience
+version: "${version}"
+main: com.ququla89.zoneambience.ZoneAmbiencePlugin
+api-version: "1.21"
+softdepend: [WorldGuard, FastAsyncWorldEdit, WorldEdit]
+authors: [QuQuLa89]
+description: 指定範囲のプレイヤー個人にパーティクル・疑似天候・個人時間・環境音を表示するプラグイン
+
+commands:
+  zoneambience:
+    aliases: ["zamb", "za"]
+    description: ZoneAmbience の操作・設定・管理
+    usage: /zamb <help|toggle|wand|shape|radius|height|visualize|create|list|edit|remove|give|history|rollback>
+
+permissions:
+  zoneambience.use:
+    description: パーティクル等の個人表示トグルと基本利用
+    default: true
+  zoneambience.wand:
+    description: ワンド取得・範囲選択・専用アイテム使用・自エリア編集と回収
+    default: true
+  zoneambience.create:
+    description: コマンドによるパーティクルエリアの作成・編集
+    default: op
+  zoneambience.give:
+    description: パーティクルアイテムの配布
+    default: op
+  zoneambience.history:
+    description: 操作履歴の閲覧
+    default: op
+  zoneambience.rollback:
+    description: 操作履歴からのロールバック
+    default: op
+  zoneambience.admin:
+    description: 全エリアの編集・削除・回収・上限バイパス・履歴・ロールバック
+    default: op
+    children:
+      zoneambience.use: true
+      zoneambience.wand: true
+      zoneambience.create: true
+      zoneambience.give: true
+      zoneambience.history: true
+      zoneambience.rollback: true

@@ -1,0 +1,17 @@
+.gradle/
+build/
+!gradle/wrapper/gradle-wrapper.jar
+.idea/
+*.iml
+out/
+.DS_Store
+.kotlin/
+run/
+local.properties
+bin/
+/ktlint
+/ktlint.exe
+.env
+.env.*
+!.env.example
+!.env.sample
